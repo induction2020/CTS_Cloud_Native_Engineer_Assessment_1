@@ -1,0 +1,91 @@
+
+<table style="width: 90%;padding-left: 200px">
+    <tr>
+      <td style="padding-left: 200px">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li ><a class="navbar-brand" style="width: 250px" href="book-ride">Book Ride</a></li>
+                <li class="active"><a class="navbar-brand" style="width: 250px" href="cancel-ride">Cancel Ride</a></li>
+                <li><a class="navbar-brand" style="width: 250px" href="track-ride">Track My Ride</a></li>
+            </ul>
+          </div>
+        </nav>
+      </td>
+  </table>
+  
+
+<br><br>
+
+<div class="col-md-12 user-container" style="text-align: center">
+  <form [formGroup]="cancelRideForm" (ngSubmit)="cancelRide()">
+    <table class=".table-bordered">
+      <tr>
+        <td class="tdClass">
+          <label for="userId">User Id</label>
+        </td>
+        <td class="tdClass">
+          <label for="userName">User Name</label>
+        </td>
+        <td  class="tdClass">
+          <label for="from">From</label>
+        </td>
+        <td  class="tdClass">
+          <label for="to">To</label>
+        </td>
+        <td  class="tdClass">
+          <label for="noOfSeats">No of Seats</label>
+        </td>
+        <td  class="tdClass">
+          <label for="date">Date and Time</label>
+        </td>
+        <td  class="tdClass">
+            <label for="date">Status</label>
+          </td>
+      </tr>
+
+      <tr>
+          <td>
+              <input type="text" formControlName="userId" placeholder="userId" name="userId" class="form-control" id="userId">
+          </td>
+          <td>
+              <input type="text" formControlName="userName" placeholder="User Name" name="userName" class="form-control" id="userName">
+          </td>
+          <td>
+              <input type="text" formControlName="from" placeholder="From" name="from" class="form-control" id="from">
+          </td>
+          <td>
+              <input type="text" formControlName="to" placeholder="Destination" name="to" class="form-control" id="to">
+          </td>
+          <td>
+              <input type="text" formControlName="noOfSeats" placeholder="No of Seats" name="noOfSeats" class="form-control" id="noOfSeats">
+          </td>
+          <td>
+              <input type="text" formControlName="date" placeholder="Date and Time" name="date" class="form-control" id="date">
+          </td>
+          <td>
+              <input type="text" formControlName="status" placeholder="Status" name="status" class="form-control" id="status">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+              <button class="btn btn-warning">Waiting for Trip Confirmation</button>
+          </td>
+          <td>
+              <img src="assets/loader_2.gif" alt="Waiting" width="40%" height="50%" />
+          </td>
+          <td><button class="btn btn-danger">Cancel Ride</button></td>
+        </tr>
+
+    </table>
+    
+
+  </form>
+  </div>

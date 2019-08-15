@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+
+zuul:
+  prefix: /api
+  routes:
+    customer-service:
+      path: /customer/**
+      url: http://localhost:8088
+    employee-service:
+      path: /employee/**
+      url: http://localhost:8092
+    admin-service:
+      path: /adminservice/**
+      url: http://localhost:8089
+    

@@ -1,0 +1,70 @@
+
+
+<table style="width: 90%;padding-left: 200px">
+    <tr>
+      <td style="padding-left: 200px">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active" ><a class="navbar-brand" style="width: 250px" href="book-ride">Book Ride</a></li>
+                <li><a class="navbar-brand" style="width: 250px" href="cancel-ride">Cancel Ride</a></li>
+                <li><a class="navbar-brand" style="width: 250px" href="track-ride">Track My Ride</a></li>
+            </ul>
+          </div>
+        </nav>
+      </td>
+  </table>
+  
+
+<br><br>
+
+
+  <div class="col-md-6 user-container" style="padding-left: 300px">
+
+      <form [formGroup]="bookRideForm" (ngSubmit)="bookRide()">
+
+        
+          <div class="form-group">
+              <label for="userId">User Id:</label>
+              <input type="text" formControlName="userId" placeholder="userId" name="userId" class="form-control" id="userId">
+          </div>
+  
+          <div class="form-group">
+              <label for="userId">User Name:</label>
+              <input type="text" formControlName="userId" placeholder="userId" name="userId" class="form-control" id="userId">
+          </div>
+
+        <div class="form-group">
+          <label for="from">From:</label>
+          <select formControlName="from" placeholder="From" name="from" class="form-control" id="from">
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Bangalore">Pune</option>
+            <option value="Hydrabad">Hydrabad</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <label for="to">To:</label>
+          <select formControlName="to" placeholder="Destination" name="to" class="form-control" id="to">
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Bangalore">Pune</option>
+            <option value="Hydrabad">Hydrabad</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+            <label for="noOfSeats">No of Seats:</label>
+            <input type="text" formControlName="noOfSeats" placeholder="No of Seats" name="noOfSeats" class="form-control" id="noOfSeats">
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Date and Time:</label>
+            <input type="text" formControlName="date" placeholder="Date and Time" name="date" class="form-control" id="date">
+        </div>
+
+        <button class="btn btn-success">Book Ride</button>
+    
+      </form>
+    </div>
